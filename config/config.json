@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/hardwareRequestForm/HardwareRequestFormWebPart.js",
+      "manifest": "./src/webparts/hardwareRequestForm/HardwareRequestFormWebPart.manifest.json",
+      "outputPath": "./dist/hardware-request-form.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "hardwareRequestFormStrings": "webparts/hardwareRequestForm/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "5a4d7375-087f-4781-8850-0f341bb9e790",
+  "alias": "HardwareRequestFormWebPart",
+  "componentType": "WebPart",
+  "version": "*", // The "*" signifies that the version should be taken from the package.json
+  "manifestVersion": 2,
+
+  /**
+   * This property should only be set to true if it is certain that the webpart does not
+   *  allow arbitrary scripts to be called
+   */
+  "safeWithCustomScriptDisabled": false,
+
+  "preconfiguredEntries": [{
+    "groupId": "5a4d7375-087f-4781-8850-0f341bb9e790",
+    "group": { "default": "Under Development" },
+    "title": { "default": "HardwareRequestForm" },
+    "description": { "default": "HardwareRequestForm description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "HardwareRequestForm"
+    }
+  }]
+}

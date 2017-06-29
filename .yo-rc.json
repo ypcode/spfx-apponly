@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.1.1",
+    "libraryName": "spfx-apponly",
+    "libraryId": "6cb0523c-6f00-4898-8bb0-6d000aad3be9",
+    "environment": "spo"
+  }
+}

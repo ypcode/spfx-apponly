@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "spfx-apponly-client-side-solution",
+    "id": "6cb0523c-6f00-4898-8bb0-6d000aad3be9",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-apponly.sppkg"
+  }
+}
