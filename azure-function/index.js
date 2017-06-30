@@ -34,7 +34,7 @@ module.exports = function (context, req) {
     context.log('Sending app-only request to Hardware Requests list.');
 
     var siteUrl = "https://<yourtenant>.sharepoint.com/sites/<yoursite>";
-    var clientId = "<your client id>;
+    var clientId = "<your client id>";
     var clientSecret = "<your client secret>";
 
     // Instantiate the service in app-only
