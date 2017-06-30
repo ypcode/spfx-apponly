@@ -5,7 +5,7 @@ import { escape } from '@microsoft/sp-lodash-subset';
 
 import { TextField, Dropdown, IDropdownOption, PrimaryButton } from "office-ui-fabric-react";
 import { IHardwareRequest } from "../../../model/IHardwareRequest";
-import { HardwareRequestService } from "../../../services/HardwareRequestService";
+import { HardwareRequestProxyService, AzureFunctionSiteUrl, AzureFunctionUrl } from "../../../services/HardwareRequestProxyService";
 
 
 
@@ -26,15 +26,29 @@ export default class HardwareRequestForm extends React.Component<IHardwareReques
     };
   }
 
+  private executeOrDelayUntilAuthenticated(action: Function): void {
+    if (this.authenticated) {
+      action();
+    } else {
+      setTimeout(() => {
+        this.executeOrDelayUntilAuthenticated(action);
+      }, 1000);
+    }
+  }
+
   private submitRequest() {
-    let service = HardwareRequestService.createForCurrentWeb();
-    service.submitRequest(this.currentRequest);
+    this.executeOrDelayUntilAuthenticated(() => {
+      let service = new HardwareRequestProxyService(this.props.httpClient);
+      service.submitRequest(this.currentRequest);
+    });
+
   }
 
   public render(): React.ReactElement<IHardwareRequestFormProps> {
     return (
       <div className={styles.hardwareRequestForm}>
         <div className={styles.container}>
+          <iframe src={AzureFunctionSiteUrl} style={{ display: "none" }} onLoad={() => this.authenticated = true} />
           <div className={`ms-Grid-row`}>
             <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
               <h2>Submit a new Hardware request</h2>

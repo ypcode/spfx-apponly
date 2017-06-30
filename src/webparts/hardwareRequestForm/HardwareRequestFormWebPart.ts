@@ -32,7 +32,8 @@ public onInit(): Promise<void> {
     const element: React.ReactElement<IHardwareRequestFormProps > = React.createElement(
       HardwareRequestForm,
       {
-        description: this.properties.description
+        description: this.properties.description,
+        httpClient: this.context.httpClient
       }
     );
 
