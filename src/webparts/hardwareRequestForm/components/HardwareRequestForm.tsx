@@ -12,7 +12,6 @@ import { HardwareRequestService } from "../../../services/HardwareRequestService
 export default class HardwareRequestForm extends React.Component<IHardwareRequestFormProps, void> {
 
   private currentRequest: IHardwareRequest;
-  private authenticated: boolean;
 
   constructor(props: IHardwareRequestFormProps) {
     super(props);
