@@ -5,7 +5,7 @@ import { escape } from '@microsoft/sp-lodash-subset';
 
 import { TextField, Dropdown, IDropdownOption, PrimaryButton } from "office-ui-fabric-react";
 import { IHardwareRequest } from "../../../model/IHardwareRequest";
-import { HardwareRequestProxyService, AzureFunctionSiteUrl, AzureFunctionUrl } from "../../../services/HardwareRequestProxyService";
+import { HardwareRequestProxyService, AzureFunctionSiteUrl } from "../../../services/HardwareRequestProxyService";
 
 
 
